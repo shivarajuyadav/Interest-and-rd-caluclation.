@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+<!-- to inherit the properties of base.html page to respective html pages -->
+{% block content %}
+<form action="interest" method="POST">
+    {% csrf_token %}
+    <center>
+    <div>
+        <div class=" card card-body">
+            <!-- <h1>home page..!</h1><br> -->
+            <h1>welcome..   {{ user.username }} </h1><br>
+            <!-- <h1> password = {{user.password}}</h1> <br><br> -->
+            <a href="{% url 'user_update' %}" style="text-decoration: none;"  class="btn btn-warning">UPDATE</a> 
+        </div>
+    </div><br><br>
+    <h1> Calculate Your RD Rate Of Interest </h1>
+    <br>
+    <div class="card card-body " >
+        <div>
+            <form action="">
+              {% csrf_token %}
+              Total_Amount : <input type="text" placeholder="Enter the amount" name="amount"> <br><br>
+              Number_of_years : <input type="text" placeholder="Enter Year " name="noof_year"><br><br>
+              age : <input type="text" name="age" id="" placeholder="Enter the age"> <br><br>
+              <a href="{% url 'interest' %}"><input type="submit" class="btn btn-success"  value="CALCULATE"></a> <br><br>
+            </form>
+            
+            <p>
+                <a  data-bs-toggle="collapse" href="#collapseExample"  aria-expanded="false" aria-controls="collapseExample">
+                  Know more about interest rate.....
+                </a>
+                
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  <table border="6px" cellpadding="3px">
+                    <tr>
+                        <th>NO_of_Years</th>
+                        <th>Senior_citizen</th>
+                        <th>Citizen</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>9.7%</td>
+                        <td>8.2%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>8.3%</td>
+                        <td>6.8%</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>7.0%</td>
+                        <td>5.5%</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+        </div>
+    </div>
+    </center>
+    
+    
+</form>
+<!-- {{ redirect_to_login_immediately }} -->
+
+
+
+{% endblock %}

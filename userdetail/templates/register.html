@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card card-body">
+{% if registred %}
+<h1>Thank You For registering</h1>
+<p>registeration is scucessfull....! Continue with <a href="{% url 'user_login' %}">login</a></p>
+</div>
+{% else %}
+ <h1>REGISTER HERE ...!</h1>
+ <form action="" method="POST" enctype="multipart/form-data" >
+  {% csrf_token %}
+    {{ form.as_p }}
+    {{ profile.as_p }}
+    <input type="submit" value="REGISTER">
+ </form>
+{% endif %}
+
+{% endblock %}

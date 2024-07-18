@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<center>
+<div class="jumbotron">
+   <div class="card card-body">
+          <br><br>
+      <h1>login page </h1>
+      <br><hr>
+      <br>
+      <form action="{% url 'user_login' %}" method="POST">
+          {% csrf_token %}
+          User_Name: <input type="text" name="username" placeholder="Enter the user mail" >
+          <br><br>
+           Password : <input type="password"  name="password" placeholder="Enter the Passwword " >
+          <br> <br>
+          <input type="submit" value="LOGIN" class="btn btn-success">
+      </form>
+   </div>
+</div>
+</center>
+
+{% endblock %}

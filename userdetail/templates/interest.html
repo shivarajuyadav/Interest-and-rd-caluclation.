@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <center>
+    <form action="">
+        <h1 >Here  your RD rate of interest </h1><br>
+        <hr>
+        {% csrf_token %}
+        {% if senior_citizen %}
+            <h3 class="btn btn-warning">Senior_Citizen</h3><br>
+            User_Name : {{ user.username }} <br><br>
+            age:{{ age }} <br><br>
+            Interest_Amount : {{ amount }} <br><br>
+            No_of_years : {{ noof_year }} <br><br>
+            Total_Amount : {{ total_investment  }} <br><br>
+            Total_Months : {{ total_months }} <br><br>
+            RD_Rate_of_Interest : {{ rate_of_interest }} <br><br>
+            Interest_Amount : {{ interest_amount }} <br><br>
+             <hr>
+             <h3 class="btn btn-warning"> Total_Returns :  {{ total_returns }}</h3>
+        {% else %}
+            <h3 class="btn btn-warning">Citizen</h3><br><br>
+            User_Name : {{ user.username }} <br><br>
+            age:{{ age }} <br><br>
+            Interest_Amount : {{ amount }} <br><br>
+            No_of_years : {{ noof_year }} <br><br>
+            Total_Amount : {{ total_investment  }} <br><br>
+            Total_Months : {{ total_months }} <br><br>
+            RD_Rate_of_Interest : {{ rate_of_interest }} <br><br>
+            Interest_Amount : {{ interest_amount }} <br><br>
+            <hr>
+            <h3 class="btn btn-warning"> Total_Returns :  {{ total_returns }}</h3>
+        {% endif %}
+
+    </form>
+    
+    
+
+</div>
+
+{% endblock %}
