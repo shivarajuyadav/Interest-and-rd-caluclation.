@@ -1,0 +1,34 @@
+first u need to install vs code software and python software
+	vs code inside installation
+		1.code runner
+		2.code snapshot
+		3.html css suppport
+		4.live preview
+		5.javascript(es6)
+		6.live servre
+		7.node snippets
+		8.node.js modulas intellisence
+		9.open in browser
+		10. pylance
+		11.python
+		12.python debugger
+		13.vscode-icons
+
+
+inside command prompt first doing
+
+-pip install virtualenv
+-python -m venv ghost
+-ghost\scripts\activate
+-pip install django
+-django-admin startproject user
+-cd user
+-django-admin startapp userapp
+-code .
+
+-python manage.py runserver
+-python manage.py makemigrations
+-python manage.py migrate
+-python manage.py runserver
+
+
